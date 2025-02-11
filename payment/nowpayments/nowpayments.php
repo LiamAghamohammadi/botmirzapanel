@@ -32,7 +32,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode([
             'order_id' => $invoice_id,
             'order_description' => $order_description,
             'success_url' => "https://".$domainhosts . '/payment/nowpayments/back.php',
-            'is_fee_paid_by_user' => true
+            'is_fee_paid_by_user' => false
         ]));
 
 $response = curl_exec($curl);
