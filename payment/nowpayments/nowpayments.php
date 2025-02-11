@@ -29,6 +29,7 @@ curl_setopt_array($curl, array(
 curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode([
             'price_amount' => $amount,
             'price_currency' => 'usd',
+            'pay_currency' => 'trx',
             'order_id' => $invoice_id,
             'order_description' => $order_description,
             'success_url' => "https://".$domainhosts . '/payment/nowpayments/back.php',
